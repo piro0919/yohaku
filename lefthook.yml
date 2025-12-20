@@ -1,0 +1,20 @@
+pre-commit:
+  parallel: true
+  commands:
+    format:
+      glob: "**/*"
+      run: npx prettier --write {staged_files}
+      stage_fixed: true
+    lint:
+      glob: "**/*.{ts,tsx}"
+      run: npx eslint --fix {staged_files}
+      stage_fixed: true
+    secretlint:
+      glob: "**/*"
+      run: npx secretlint --maskSecrets {staged_files}
+    typecheck:
+      run: npx tsc --noEmit
+commit-msg:
+  scripts:
+    "commitlint.sh":
+      runner: bash
