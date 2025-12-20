@@ -1,3 +1,4 @@
+"use client";
 import {
   Calendar,
   CalendarCurrentDate,
@@ -12,8 +13,12 @@ import {
 } from "@/components/ui/full-calendar";
 import { addHours } from "date-fns";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import * as locales from "date-fns/locale";
+import { useLocale } from "next-intl";
 
 export default function Page() {
+  const locale = useLocale();
+
   return (
     <Calendar
       events={[
@@ -32,14 +37,15 @@ export default function Page() {
           color: "blue",
         },
       ]}
+      locale={locales[locale as keyof typeof locales]}
     >
       <div
-        className="p-14 flex flex-col"
+        className="p-2 flex flex-col"
         style={{
           height: "calc(100svh - var(--spacing) * 16)",
         }}
       >
-        <div className="flex px-6 items-center gap-2 mb-6">
+        <div className="flex items-center gap-2 mb-2">
           <CalendarViewTrigger className="aria-current:bg-accent" view="day">
             Day
           </CalendarViewTrigger>
@@ -64,7 +70,7 @@ export default function Page() {
             <span className="sr-only">Next</span>
           </CalendarNextTrigger>
         </div>
-        <div className="flex-1 px-6 overflow-hidden">
+        <div className="flex-1 overflow-hidden">
           <CalendarDayView />
           <CalendarWeekView />
           <CalendarMonthView />

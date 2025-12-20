@@ -54,7 +54,7 @@ export default async function RootLayout({
                 <Header />
               </div>
               <AppSidebar />
-              <main className="mt-16 flex-1">{children}</main>
+              <main className="mt-14 flex-1">{children}</main>
             </SidebarProvider>
           </ThemeProvider>
         </NextIntlClientProvider>

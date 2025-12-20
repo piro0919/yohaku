@@ -1,4 +1,4 @@
-import { Calendar, LayoutDashboard, Pen, Settings } from "lucide-react";
+import { Calendar, Crown, Pen, Settings, Users } from "lucide-react";
 
 import {
   Sidebar,
@@ -13,11 +13,6 @@ import {
 // Menu items.
 const items = [
   {
-    title: "ダッシュボード",
-    url: "/dashboard",
-    icon: LayoutDashboard,
-  },
-  {
     title: "エディター",
     url: "/write",
     icon: Pen,
@@ -28,19 +23,29 @@ const items = [
     icon: Calendar,
   },
   {
+    title: "フォロー中",
+    url: "/following",
+    icon: Users,
+  },
+  {
     title: "設定",
     url: "/settings",
     icon: Settings,
+  },
+  {
+    title: "プレミアム",
+    url: "/premium",
+    icon: Crown,
   },
 ];
 
 export function AppSidebar() {
   return (
     <Sidebar
-      className="mt-16"
+      className="mt-14"
       collapsible="icon"
       style={{
-        height: "calc(100svh - var(--spacing) * 16)",
+        height: "calc(100svh - var(--spacing) * 14)",
       }}
     >
       <SidebarContent>
