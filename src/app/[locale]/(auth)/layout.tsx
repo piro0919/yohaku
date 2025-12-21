@@ -10,7 +10,7 @@ export type LayoutProps = Readonly<{
 
 export default async function Layout({ children }: LayoutProps) {
   if (true) {
-    return <Landing />;
+    // return <Landing />;
   }
 
   return (

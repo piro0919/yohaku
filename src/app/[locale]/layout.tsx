@@ -6,9 +6,6 @@ import { setRequestLocale } from "next-intl/server";
 import { ThemeProvider } from "next-themes";
 import { notFound } from "next/navigation";
 import { ReactNode } from "react";
-import { AppSidebar } from "@/components/app-sidebar";
-import { SidebarProvider } from "@/components/ui/sidebar";
-import Header from "./(auth)/_components/header";
 import "@blocknote/core/fonts/inter.css";
 import "@blocknote/shadcn/style.css";
 
