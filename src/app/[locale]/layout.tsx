@@ -8,7 +8,7 @@ import { notFound } from "next/navigation";
 import { ReactNode } from "react";
 import { AppSidebar } from "@/components/app-sidebar";
 import { SidebarProvider } from "@/components/ui/sidebar";
-import Header from "./_components/header";
+import Header from "./(auth)/_components/header";
 import "@blocknote/core/fonts/inter.css";
 import "@blocknote/shadcn/style.css";
 
@@ -49,13 +49,7 @@ export default async function RootLayout({
             enableSystem={false}
             disableTransitionOnChange={true}
           >
-            <SidebarProvider>
-              <div className="fixed top-0 left-0 right-0 z-50">
-                <Header />
-              </div>
-              <AppSidebar />
-              <main className="mt-14 flex-1">{children}</main>
-            </SidebarProvider>
+            {children}
           </ThemeProvider>
         </NextIntlClientProvider>
       </body>

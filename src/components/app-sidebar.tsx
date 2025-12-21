@@ -1,4 +1,4 @@
-import { Calendar, Crown, Pen, Settings, Users } from "lucide-react";
+import { Calendar, Settings } from "lucide-react";
 
 import {
   Sidebar,
@@ -13,29 +13,14 @@ import {
 // Menu items.
 const items = [
   {
-    title: "エディター",
-    url: "/write",
-    icon: Pen,
-  },
-  {
     title: "カレンダー",
     url: "/calendar",
     icon: Calendar,
   },
   {
-    title: "フォロー中",
-    url: "/following",
-    icon: Users,
-  },
-  {
     title: "設定",
     url: "/settings",
     icon: Settings,
-  },
-  {
-    title: "プレミアム",
-    url: "/premium",
-    icon: Crown,
   },
 ];
 
