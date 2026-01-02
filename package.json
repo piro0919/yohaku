@@ -23,8 +23,8 @@
     "zod": "4.2.1"
   },
   "devDependencies": {
-    "@commitlint/cli": "20.2.0",
-    "@commitlint/config-conventional": "20.2.0",
+    "@commitlint/cli": "20.3.0",
+    "@commitlint/config-conventional": "20.3.0",
     "@secretlint/secretlint-rule-preset-recommend": "11.2.5",
     "@tailwindcss/postcss": "^4",
     "@total-typescript/ts-reset": "0.6.1",
