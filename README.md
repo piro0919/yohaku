@@ -2,7 +2,6 @@
 
 > Block-based editor web app built with [BlockNote](https://www.blocknotejs.org/).
 
-[🔗 Live Demo](https://yohaku-seven.vercel.app)
 
 ## ✨ Features
 
